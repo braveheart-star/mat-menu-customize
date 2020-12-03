@@ -1,34 +1,16 @@
 <button class="menuItems mat-menu-item menu-item" [matMenuTriggerFor]="menu" aria-label="Select Item">
-  <img src="https://pbs.twimg.com/profile_images/838867731327807489/7S9ysf2l_200x200.jpg" class="menu-img">
-  <span class="menu-item-inner"> {{selectedOptionMenu}}</span>
+  <img [src]="currentState[0].image" class="menu-img">
+  <span class="menu-item-inner"> {{currentState[0].value}}</span>
+  <mat-icon class="m-0">unfold_more</mat-icon>
 </button>
-
 <mat-menu [overlapTrigger]="true" #menu="matMenu">
-
-  <button (click)="selectedOptionMenu='The vicious cycle'" class="menu-item" mat-menu-item>
-    <img src="https://pbs.twimg.com/profile_images/838867731327807489/7S9ysf2l_200x200.jpg" class="menu-img">
-    <span class="menu-item-inner"> The vicious cycle</span>
+  <button [disableRipple]="true" *ngFor="let option of currentState; let i = index" (click)="select(i)"
+    class="menu-item pad-5-tb" mat-menu-item>
+    <img [src]="option.image" class="menu-img">
+    <span class="menu-item-inner"> {{option.value}}</span>
   </button>
-
-  <button (click)="selectedOptionMenu='GYM solutions'" class="menu-item" mat-menu-item>
-    <img src="https://pbs.twimg.com/profile_images/838867731327807489/7S9ysf2l_200x200.jpg" class="menu-img">
-    <span class="menu-item-inner">
-      GYM solutions</span>
-  </button>
-
-
-  <button (click)="selectedOptionMenu='New Account'" class="menu-item" mat-menu-item>
-    <div class="menu-img plus">
-      +
-    </div>
+  <button class="menu-item" mat-menu-item>
+    <mat-icon>add</mat-icon>
     <span class="menu-item-inner">New Account</span>
   </button>
-
-</mat-menu>
-
-
-<button class="ment-button menu-items" [matMenuTriggerFor]="menu1">Menu</button>
-<mat-menu #menu1="matMenu">
-  <button mat-menu-item>Item 1</button>
-  <button mat-menu-item>Item 2</button>
 </mat-menu>

@@ -34,10 +34,20 @@ mat-option {
 }
 
 .menuItems {
-  min-width: max-content;
-  max-width: 196px;
+  min-width: 270px;
+  max-width: 300px;
 }
 
 .cdk-overlay-container .cdk-overlay-pane .mat-menu-content {
-  padding: 0
+  padding: 0;
+}
+
+.cdk-overlay-container .mat-menu-item {
+  height: 56px;
+  width: 270px;
+}
+
+.cdk-overlay-container .mat-menu-item .mat-icon {
+  margin-right: 8px;
+  margin-left: 8px;
 }

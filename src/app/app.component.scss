@@ -1,4 +1,5 @@
 .menu-img {
+  border-radius: 9999px;
   height: 2.5rem;
   width: 2.5rem;
   &.plus {
@@ -8,7 +9,8 @@
   }
 }
 
-.menu-item {
+.menu-item,
+mat-option {
   font-weight: 500;
   font-size: 14px;
   display: flex;
@@ -21,10 +23,16 @@
 
 .menuItems {
   min-width: max-content;
-  max-width: 196px;
-  margin: auto;
+  max-width: 270px;
+  height: 56px;
+  border-radius: .375rem;
+  mat-icon {
+    margin-right: 0;
+    margin-left: auto;
+  }
 }
 
 .cdk-overlay-container .mat-menu-content {
-  padding: 300;
+  padding: 0;
 }
+
