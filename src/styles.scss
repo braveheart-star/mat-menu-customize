@@ -1,0 +1,43 @@
+/* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+  height: 100%;
+}
+body {
+  color: rgb(22, 30, 46);
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.menu-img {
+  border-radius: 9999px;
+  height: 2.5rem;
+  width: 2.5rem;
+  &.plus {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.menu-item,
+mat-option {
+  font-weight: 500;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+
+  .menu-item-inner {
+    margin-left: 15px;
+  }
+}
+
+.menuItems {
+  min-width: max-content;
+  max-width: 196px;
+}
+
+.cdk-overlay-container .cdk-overlay-pane .mat-menu-content {
+  padding: 0
+}

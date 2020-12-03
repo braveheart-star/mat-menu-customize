@@ -1,0 +1,30 @@
+.menu-img {
+  height: 2.5rem;
+  width: 2.5rem;
+  &.plus {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.menu-item {
+  font-weight: 500;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+
+  .menu-item-inner {
+    margin-left: 15px;
+  }
+}
+
+.menuItems {
+  min-width: max-content;
+  max-width: 196px;
+  margin: auto;
+}
+
+.cdk-overlay-container .mat-menu-content {
+  padding: 300;
+}
