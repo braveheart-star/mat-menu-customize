@@ -1,16 +1,1 @@
-<button class="menuItems mat-menu-item menu-item" [matMenuTriggerFor]="menu" aria-label="Select Item">
-  <img [src]="currentState[0].image" class="menu-img">
-  <span class="menu-item-inner"> {{currentState[0].value}}</span>
-  <mat-icon class="m-0">unfold_more</mat-icon>
-</button>
-<mat-menu [overlapTrigger]="true" #menu="matMenu">
-  <button [disableRipple]="true" *ngFor="let option of currentState; let i = index" (click)="select(i)"
-    class="menu-item pad-5-tb" mat-menu-item>
-    <img [src]="option.image" class="menu-img">
-    <span class="menu-item-inner"> {{option.value}}</span>
-  </button>
-  <button class="menu-item" mat-menu-item>
-    <mat-icon>add</mat-icon>
-    <span class="menu-item-inner">New Account</span>
-  </button>
-</mat-menu>
+<app-mat-menu [value]="items[1]" (selectionChange)="selectionChange($event)" (addNew)="new()" [items]="items"></app-mat-menu>
